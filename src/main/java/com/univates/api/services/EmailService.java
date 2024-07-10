@@ -92,20 +92,20 @@ public class EmailService
     
     private void sendEmail( String to, String subject, String message )
     {
-        try
-        {
-            SimpleMailMessage simpleMailMessage = new SimpleMailMessage();
-            simpleMailMessage.setFrom( from );
-            simpleMailMessage.setTo( to );
-            simpleMailMessage.setSubject( subject );
-            simpleMailMessage.setText( message );
-            
-            sender.send( simpleMailMessage );
-        }
-        
-        catch ( Exception e )
-        {
-            throw new RuntimeException( "Cannot send email" );
-        }
+//        try
+//        {
+//            SimpleMailMessage simpleMailMessage = new SimpleMailMessage();
+//            simpleMailMessage.setFrom( from );
+//            simpleMailMessage.setTo( to );
+//            simpleMailMessage.setSubject( subject );
+//            simpleMailMessage.setText( message );
+//            
+//            sender.send( simpleMailMessage );
+//        }
+//        
+//        catch ( Exception e )
+//        {
+//            throw new RuntimeException( "Cannot send email" );
+//        }
     }
 }

@@ -48,7 +48,7 @@ public class EventController
     
     @PostMapping
     @Operation( description = "Adciona um novo evento" )
-    @ApiResponses( value = { @ApiResponse ( responseCode = "200", description = "Retorna o novo evento" ),
+    @ApiResponses( value = { @ApiResponse ( responseCode = "201", description = "Retorna o novo evento" ),
                              @ApiResponse ( responseCode = "401", description = "Credenciais da API intermediária estão incorretas" ),
                            } )
     public ResponseEntity<EventResponseRecord> addEvent( @RequestHeader String login, @RequestHeader String pass, @RequestHeader String user, @RequestBody @Valid EventRecord er, HttpServletRequest request )
