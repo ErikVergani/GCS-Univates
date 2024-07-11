@@ -11,6 +11,7 @@
 	</parent>
 	<groupId>com.univates</groupId>
 	<artifactId>api</artifactId>
+	<version>work</version>
 	<name>api</name>
 	<description>api to controll events</description>
 	<properties>
