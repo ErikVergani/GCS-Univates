@@ -231,7 +231,7 @@ class ApiApplicationTests
 						.content( newItem )
 				)
 				.andExpect( status().is4xxClientError() )
-				.andExpect( jsonPath("$.message").value( "Usuário já encontra-se registrado" ) );
+				.andExpect( jsonPath("$.message").value( "Usuário já encontra-se registradoo" ) );
 	}
 	
 	@Test
@@ -289,7 +289,8 @@ class ApiApplicationTests
 				.andExpect( jsonPath("$", hasSize( equalTo( 1 ) ) ) );
 	}
 	
-	private HttpHeaders getDefaultHeaders( boolean needUser ) {
+	private HttpHeaders getDefaultHeaders( boolean needUser ) 
+	{
         HttpHeaders headers = new HttpHeaders();
         headers.add("login", "api");
         headers.add("pass", "api123");
