@@ -231,7 +231,7 @@ class ApiApplicationTests
 						.content( newItem )
 				)
 				.andExpect( status().is4xxClientError() )
-				.andExpect( jsonPath("$.message").value( "Usuário já encontra-se registradoo" ) );
+				.andExpect( jsonPath("$.message").value( "Usuário já encontra-se registrado" ) );
 	}
 	
 	@Test
