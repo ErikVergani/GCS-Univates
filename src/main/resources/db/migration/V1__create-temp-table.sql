@@ -1,1 +1,0 @@
-create table temp_table ( id int, name varchar( 255 ));

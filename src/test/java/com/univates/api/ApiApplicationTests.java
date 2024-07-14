@@ -1,6 +1,7 @@
 package com.univates.api;
 
-import com.univates.api.services.UserService;
+import com.univates.api.repositories.UserRepository;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
@@ -26,7 +27,7 @@ class ApiApplicationTests
 	private MockMvc mockMvc;
 	
 	@Autowired
-	UserService userService;
+	UserRepository userRepository;
 
 	/* USERS TEST */
 	@Test
@@ -287,6 +288,13 @@ class ApiApplicationTests
 				)
 				.andExpect( status().isOk() )
 				.andExpect( jsonPath("$", hasSize( equalTo( 1 ) ) ) );
+	}
+	
+	@Test
+	@Order(21)
+	public void testGetUsersFromDb() throws  Exception
+	{
+		Assertions.assertEquals( 2, userRepository.findAll().size() );
 	}
 	
 	private HttpHeaders getDefaultHeaders( boolean needUser ) 
