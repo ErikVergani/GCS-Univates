@@ -64,6 +64,7 @@ public class UserController
     @GetMapping
     public ResponseEntity<List<UserResponseRecord>> getUsers()
     {
+        System.out.println("OLÁ, MODIFICAÇÃO APLICADA!");
         return userService.getAllUsers();
     }
 }
