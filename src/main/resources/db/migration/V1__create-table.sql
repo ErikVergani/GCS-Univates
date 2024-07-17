@@ -1,1 +1,1 @@
-create table categoria( id int, desc varchar(255) )
+create table categoria( id int, descricao varchar(255) )
