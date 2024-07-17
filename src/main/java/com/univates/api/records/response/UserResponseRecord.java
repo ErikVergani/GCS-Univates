@@ -19,10 +19,10 @@ import java.util.List;
 /**
  * @author ev
  */
-public record UserResponseRecord( String name, String login, String email )
+public record UserResponseRecord( String name, String login, String email, String color )
 {
     public UserResponseRecord( User user )
     {
-        this( user.getName(), user.getLogin(), user.getEmail() );
+        this( user.getName(), user.getLogin(), user.getEmail(), "AZUL" );
     }
 }

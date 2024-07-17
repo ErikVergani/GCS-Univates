@@ -1,0 +1,1 @@
+create table categoria( id int, desc varchar(255) );
